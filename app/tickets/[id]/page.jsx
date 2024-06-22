@@ -1,4 +1,17 @@
-import React from "react";
+import { notFound } from "next/navigation";
+
+// tells Next.js to return 404 if not exists, true is default
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+  const res = await fetch("http://localhost:4000/tickets");
+
+  const tickets = await res.json();
+
+  return tickets.map((ticket) => ({
+    id: ticket.id,
+  }));
+}
 
 // responsible for fetching
 async function getTicket(id) {
@@ -7,6 +20,10 @@ async function getTicket(id) {
       revalidate: 60, // exceed 60 sec then will fetch again
     },
   });
+
+  if (!res.ok) {
+    notFound;
+  }
 
   return res.json();
 }
