@@ -1,5 +1,7 @@
 import React from "react";
 import TicketList from "./TicketList";
+import { Suspense } from "react";
+import Loading from "../loading";
 
 export default function Tickets() {
   return (
@@ -12,7 +14,10 @@ export default function Tickets() {
           </p>
         </div>
       </nav>
-      <TicketList />
+      {/* creates a suspense for the bottom elements so the top renders immediately but this doesnt */}
+      <Suspense fallback={<Loading />}>
+        <TicketList />
+      </Suspense>
     </main>
   );
 }
