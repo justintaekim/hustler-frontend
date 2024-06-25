@@ -4,11 +4,11 @@ import React from "react";
 // responsible for fetching
 async function getTickets() {
   // imitate delay, its a fake delay
-  await new Promise((resolve) => setTimeout(resolve, 3000));
+  await new Promise((resolve) => setTimeout(resolve, 1000));
 
   const res = await fetch("http://localhost:4000/tickets", {
     next: {
-      revalidate: 10, // use 0 to opt out of using cache
+      revalidate: 0, // use 0 to opt out of using cache
     },
   });
 
