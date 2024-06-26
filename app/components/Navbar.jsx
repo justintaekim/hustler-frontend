@@ -9,12 +9,14 @@ export default function Navbar() {
       <Image
         src={Logo}
         alt="Logo image"
-        width={70}
+        width={50}
         quality={100}
-        placeholder="blur"
+        // placeholder="blur"
       />
-      <h1>I love you</h1>
-      <Link href="/">Dashboard</Link>
+      <Link href="/">
+        <h1>Hustler</h1>
+      </Link>
+      <Link href="/">Hustle Hustle!</Link>
       <Link href="/tickets">Tickets</Link>
     </nav>
   );

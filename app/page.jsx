@@ -3,7 +3,8 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main>
-      <h2>Dashboard</h2>
+      <h1>Job Searching Made Easy</h1>
+      <h2>Find your future job with with a simple click</h2>
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
         repellendus tempore, exercitationem odit, quasi doloremque possimus
