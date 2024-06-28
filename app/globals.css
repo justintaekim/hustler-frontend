@@ -7,7 +7,9 @@ body {
   background: #ebf0fa;
   @apply text-gray-500 m-8;
 }
-h1,
+h1 {
+  @apply font-bold text-primary text-lg;
+}
 h2 {
   @apply font-bold text-primary text-lg;
 }

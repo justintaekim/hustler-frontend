@@ -18,6 +18,7 @@ export default function Navbar() {
       </Link>
       <Link href="/">Hustle Hustle!</Link>
       <Link href="/tickets">Tickets</Link>
+      <Link href="/tickets">Login</Link>
     </nav>
   );
 }
